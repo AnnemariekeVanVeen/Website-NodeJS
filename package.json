@@ -1,0 +1,35 @@
+{
+  "name": "nodeapp",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "moment": "^2.24.0",
+    "mysql2": "^2.1.0",
+    "nodemon": "^2.0.2",
+    "path": "^0.12.7",
+    "sequelize": "^5.21.3",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "bcrypt": "^3.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/AnnemariekeS1146018/nodeapp.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/AnnemariekeS1146018/nodeapp/issues"
+  },
+  "homepage": "https://gitlab.com/AnnemariekeS1146018/nodeapp#readme"
+}

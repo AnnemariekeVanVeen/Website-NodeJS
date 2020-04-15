@@ -1,0 +1,63 @@
+<%- include('../layout/head') %>
+<%- include('../layout/nav') %>
+
+<body>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-8">
+            <h1 class="font-weight-bold d-inline-block">Meldingen</h1>
+        </div>
+        <div class="col-4">
+            <a class="btn btn-success col-8 d-inline-block float-right"
+               href="/~annemarieke/dagtentamen/74/create">Nieuwe Melding</a>
+        </div>
+    </div>
+    <div class="col-12">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Locatie</th>
+                <th>Melder</th>
+                <th>Datum en Tijd</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <% reports.forEach(report => { %>
+                <tr>
+                    <td><%= report.id %></td>
+                    <% if (report.type === 1) { %>
+                        <td>Dier</td>
+                    <% } %>
+                    <% if (report.type === 2) { %>
+                        <td>Mens</td>
+                    <% } %>
+                    <% if (report.type === 3) { %>
+                        <td>Meerdere Betrokkenen</td>
+                    <% } %>
+                    <% if (report.type === 4) { %>
+                        <td>Overig</td>
+                    <% } %>
+                    <td><%= report.location %></td>
+                    <td><%= report.reporterName %></td>
+                    <td><%= moment(report.createdAt).format(' DD-MM-YYYY HH:mm:ss') %></td>
+                    <td>
+                        <a href="/~annemarieke/dagtentamen/74/showReport/<%=report.id%>" class="btn btn-info">Zie
+                            Meer</a>
+                    </td>
+                    <td>
+                        <form action="/~annemarieke/dagtentamen/74/destroyReport/<%=report.id%>" method="post"
+                              role="form">
+                            <input type="submit" value="Verwijder" class="btn btn-danger">
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>

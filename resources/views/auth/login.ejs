@@ -1,0 +1,40 @@
+<%- include('../layout/head') %>
+<%- include('../layout/nav.ejs') %>
+<body>
+<header class="masthead text-center">
+    <div class="masthead-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div class="card card-signin bg-dark mt-5">
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-white">Inloggen</h5>
+                            <!-- <form class="form-signin" method="post" action="/authenticate"> -->
+                            <form class="form-signin" method="post" action="/~annemarieke/dagtentamen/74/authenticate">
+                                <div class="form-label-group">
+                                    <input type="text" id="inputlName" class="form-control" placeholder="name" name="lastName"
+                                           required autofocus>
+                                    <label for="inputlName">Achternaam</label>
+                                </div>
+
+                                <div class="form-label-group">
+                                    <input type="password" min="4" max="4" id="inputPin" class="form-control" placeholder="Pincode (3 cijfers, 1 letter)" name="pin"
+                                           required autofocus>
+                                    <label for="inputPin">Pincode</label>
+                                </div>
+                                <button class="btn btn-lg btn-outline-light btn-block text-uppercase" type="submit">Inloggen
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+
+</body>

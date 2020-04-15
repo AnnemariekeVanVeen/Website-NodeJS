@@ -1,0 +1,21 @@
+<%- include('../layout/head') %>
+<%- include('../layout/nav.ejs') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12"></div>
+        <div class="mt-5">
+            <p class="font-weight-bold d-inline-block">Beschrijving:</p>
+            <p class="d-inline-block"><%= report.description %></p>
+            <hr>
+            <p class="font-weight-bold d-inline-block">Locatie:</p>
+            <p class="d-inline-block"><%= report.location %></p>
+            <hr>
+            <p class="font-weight-bold d-inline-block">Naam:</p>
+            <p class="d-inline-block"><%= report.reporterName %></p>
+            <hr>
+            <p class="font-weight-bold d-inline-block">Telefoonnummer:</p>
+            <p class="d-inline-block"><%= report.reporterPhoneNumber %></p>
+        </div>
+    </div>
+</div>

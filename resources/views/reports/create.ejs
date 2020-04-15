@@ -1,0 +1,59 @@
+<%- include('../layout/head') %>
+<%- include('../layout/nav.ejs') %>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin bg-dark mt-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-white">Maak een melding</h5>
+                    <!-- <form class="form-signin" method="post" action="/add"> -->
+                    <form id="createReport" class="form-signin" method="post" action="/~annemarieke/dagtentamen/74/storeReport">
+
+                        <div class="form-group">
+                            <label for="inputType" class="text-white">Soort Melding</label>
+                            <select id="inputType" name="type" class="form-control" place required>
+                                <option value="1">Mens</option>
+                                <option value="2">Dier</option>
+                                <option value="3">Meerdere betrokkenen</option>
+                                <option value="4">Overig</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="text-white" for="inputDesc">Beschrijving</label>
+                            <textarea id="inputDesc" rows="4" form="createReport" class="form-control" name="description"></textarea>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="text-white" for="inputLocation">Locatie</label>
+                            <input type="text" id="inputLocation" class="form-control" placeholder="Locatie" name="location"
+                                   required autofocus>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="text-white" for="inputName">Naam Melder</label>
+                            <input type="text" id="inputName" class="form-control" placeholder="Voor- en Achternaam" name="reporterName"
+                                   required autofocus>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="text-white" for="inputPhoneNumber">Telefoonnummer Melder</label>
+                            <input type="number" id="inputPhoneNumber" class="form-control" placeholder="Telefoonnummer" name="reporterPhoneNumber"
+                                   required autofocus>
+                        </div>
+
+                        <input type="hidden" name="employeeId" value="<%= employeeObject.id%>">
+
+                        <button class="btn btn-lg btn-outline-light btn-block text-uppercase" type="submit">Verstuur
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+

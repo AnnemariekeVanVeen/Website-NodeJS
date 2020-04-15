@@ -1,0 +1,30 @@
+<%- include('../layout/head') %>
+<%- include('../layout/nav.ejs') %>
+<body class="bg-info" style="height: 100vh">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin bg-dark mt-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center text-white">Uw Gegevens</h5>
+                    <!-- <form class="form-signin" method="post" action="/add"> -->
+                    <form class="form-signin" method="post" action="/~annemarieke/dagtentamen/74/">
+
+                        <div class="form-label-group my-5">
+                            <h5 class="text-white">Voornaam</h5>
+                            <input type="text" id="inputfName" class="form-control" placeholder="name" name="firstName" value="<%= employee.firstName %>"
+                                   required autofocus disabled>
+                        </div>
+
+                        <div class="form-label-group my-5">
+                            <h3 class="text-white">Achternaam</h3>
+                            <input type="text" id="inputlName" class="form-control" placeholder="name" name="lastName" value="<%= employee.lastName %>"
+                                   required autofocus disabled>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
