@@ -22,7 +22,7 @@
     "sequelize-cli": "^5.5.1"
   },
   "devDependencies": {
-    "bcrypt": "^3.0.7"
+    "bcrypt": "^5.0.0"
   },
   "repository": {
     "type": "git",
