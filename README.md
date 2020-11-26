@@ -1,3 +1,8 @@
-# nodeapp
+# Introduction 
+NodeApp was created to report and list firealarms.
 
-In het employee model staat nog een isAdmin column, echter is het mij niet gelukt deze erin te verwerken.
+# Technologies
+NodeApp was build with NodeJs, ExpressJs and Sequelize. The frontend uses HTML, CSS and JavaScript in the form of Bootstrap.
+
+# Contribute
+Made by Annemarieke van Veen. All rights reserved.
